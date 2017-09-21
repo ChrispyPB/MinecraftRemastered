@@ -2,6 +2,16 @@
 
 #include "MainGame.h"
 
+using namespace std;
+
+void fatalError(string errorString) {
+	cout << errorString << endl;
+	cout << "Enter any key to quit";
+
+	getchar();
+	SDL_Quit();
+}
+
 MainGame::MainGame()
 {
 	_window = nullptr;
