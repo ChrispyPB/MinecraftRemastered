@@ -1,4 +1,4 @@
-#include <iostream>
+#include "include.h"
 
 #include "MainGame.h"
 
@@ -22,7 +22,7 @@ void MainGame::run() {
 }
 
 void MainGame::initSystems() {
-	// Initialize SDL
+	// Initialize SDL and create window
 	SDL_Init(SDL_INIT_EVERYTHING);
 
 	_window = SDL_CreateWindow("Minecraft Remastered", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, _windowWidth, _windowHeight, SDL_WINDOW_OPENGL);
@@ -45,7 +45,7 @@ void MainGame::processInput() {
 			break;
 
 		case SDL_MOUSEMOTION:
-			std::cout << "X: " << evnt.motion.x << " Y: " << evnt.motion.y << std::endl;
+			cout << "X: " << evnt.motion.x << " Y: " << evnt.motion.y << endl;
 			break;
 		}
 	}
